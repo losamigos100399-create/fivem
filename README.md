@@ -1,6 +1,8 @@
-# FiveM Development Plugin for Claude Code
+# FiveM Development Plugin
 
-A comprehensive Claude Code plugin for FiveM resource development. Provides dynamic documentation fetching, framework support, and best practices for QBox, QBCore, and ESX frameworks.
+A comprehensive plugin for FiveM resource development. Provides framework support and best practices for QBox, QBCore, and ESX frameworks.
+
+**Supports:** Claude Code, Cursor, Windsurf, and other AI coding assistants.
 
 ## Features
 
@@ -12,23 +14,33 @@ A comprehensive Claude Code plugin for FiveM resource development. Provides dyna
 
 ## Installation
 
-### NPM Package
+### Claude Code (NPM)
 
 ```bash
 npm install -g claude-fivem-dev
 ```
 
-### From GitHub
+### Claude Code (Git)
 
 ```bash
-git clone https://github.com/melih/fivem-dev-plugin.git ~/.claude/plugins/marketplaces/fivem-dev
+git clone https://github.com/melihbozkurt10/fivem-dev-plugin.git ~/.claude/skills/fivem-dev
+```
+
+### Cursor / Windsurf
+
+1. Download `.cursorrules` or `FIVEM_CURSOR_RULES.md` from this repo
+2. Copy to your FiveM project root as `.cursorrules`
+
+```bash
+# Or use curl
+curl -o .cursorrules https://raw.githubusercontent.com/melihbozkurt10/fivem-dev-plugin/main/.cursorrules
 ```
 
 ### Manual
 
 1. Download/clone this repository
-2. Copy to `~/.claude/plugins/marketplaces/fivem-dev/`
-3. Restart Claude Code
+2. Copy to `~/.claude/skills/fivem-dev/`
+3. Restart your AI assistant
 
 ## Usage
 

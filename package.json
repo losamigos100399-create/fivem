@@ -1,6 +1,6 @@
 {
   "name": "claude-fivem-dev",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Claude Code plugin for FiveM development - QBox, QBCore, ESX frameworks with dynamic documentation fetching",
   "keywords": [
     "claude-code",
@@ -29,6 +29,7 @@
   },
   "files": [
     ".claude-plugin/",
+    ".cursorrules",
     "commands/",
     "skills/",
     "frameworks/",
@@ -37,6 +38,7 @@
     "assets/",
     "scripts/",
     "SKILL.md",
+    "FIVEM_CURSOR_RULES.md",
     "README.md"
   ],
   "scripts": {
