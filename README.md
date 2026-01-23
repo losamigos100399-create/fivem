@@ -12,6 +12,12 @@ A comprehensive Claude Code plugin for FiveM resource development. Provides dyna
 
 ## Installation
 
+### NPM Package
+
+```bash
+npm install -g claude-fivem-dev
+```
+
 ### From GitHub
 
 ```bash
