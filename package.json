@@ -1,6 +1,6 @@
 {
   "name": "claude-fivem-dev",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Claude Code plugin for FiveM development - QBox, QBCore, ESX frameworks with dynamic documentation fetching",
   "keywords": [
     "claude-code",

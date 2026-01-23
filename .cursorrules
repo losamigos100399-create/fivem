@@ -14,6 +14,54 @@
 
 ---
 
+## CRITICAL: No Hallucination Policy
+
+**NEVER invent or guess native functions, framework APIs, or parameters.**
+
+### Strict Rules:
+1. **If unsure about a native** → Search `site:docs.fivem.net/natives {name}`
+2. **If unsure about framework API** → Search official docs first
+3. **If function doesn't exist** → Tell user honestly, suggest alternatives
+4. **If parameters unknown** → Look up documentation, don't guess
+5. **NEVER make up function names** → Only use verified APIs
+
+### Before writing ANY native or API call, verify:
+- Is this a real FiveM native? (check docs.fivem.net/natives)
+- Is the function name spelled correctly?
+- Are the parameters in correct order and type?
+- Does this work on client/server/both?
+
+### When uncertain, say:
+"I'm not 100% certain about this native/API. Please verify at [doc link]"
+
+### Verification Sources:
+| Type | Verify At |
+|------|-----------|
+| Natives | docs.fivem.net/natives |
+| QBox | docs.qbox.re |
+| QBCore | docs.qbcore.org |
+| ESX | docs.esx-framework.org |
+| ox_lib | overextended.dev/ox_lib |
+| Assets | forge.plebmasters.de |
+
+### Example - WRONG (hallucination):
+```lua
+-- BAD: Made-up native that doesn't exist
+SetPlayerInvincible(playerId, true)
+EnableVehicleNitro(vehicle)
+GetPlayerBankBalance(source)
+```
+
+### Example - RIGHT (verified):
+```lua
+-- GOOD: Real natives with correct parameters
+SetEntityInvincible(PlayerPedId(), true)  -- Verified
+SetVehicleBoostActive(vehicle, true)      -- Verified
+-- Bank balance: Use framework API, not native
+```
+
+---
+
 ## Framework Detection
 
 Check `fxmanifest.lua` for dependencies:

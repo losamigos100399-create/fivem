@@ -18,6 +18,52 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash, WebFetch
 
 ---
 
+## CRITICAL: No Hallucination Policy
+
+**NEVER invent or guess native functions, framework APIs, or parameters.**
+
+### Rules:
+1. **If unsure about a native** → MUST fetch from https://docs.fivem.net/natives/
+2. **If unsure about framework API** → MUST fetch from official docs
+3. **If function doesn't exist** → Tell user honestly, suggest alternatives
+4. **If parameters unknown** → Fetch documentation, don't guess
+
+### Before writing any native or API call:
+- [ ] Is this a real FiveM native? → Verify at docs.fivem.net/natives
+- [ ] Is this the correct function name? → Check exact spelling
+- [ ] Are these the correct parameters? → Verify parameter order and types
+- [ ] Does this work on client/server/both? → Check availability
+
+### When you don't know:
+```
+"I'm not 100% certain about this native/API. Let me fetch the documentation..."
+[Use WebFetch to get accurate info]
+```
+
+### Verification Sources:
+| Type | Source | Action |
+|------|--------|--------|
+| Native functions | https://docs.fivem.net/natives/ | WebFetch or tell user to check |
+| QBox API | https://docs.qbox.re/ | WebFetch |
+| QBCore API | https://docs.qbcore.org/ | WebFetch |
+| ESX API | https://docs.esx-framework.org/ | WebFetch |
+| ox_lib | https://overextended.dev/ox_lib | WebFetch |
+| Props/Vehicles | https://forge.plebmasters.de/ | Guide user to search |
+
+### Example - WRONG:
+```lua
+-- DON'T: Inventing a native that might not exist
+SetPlayerInvincible(playerId, true)  -- Is this real? What are the params?
+```
+
+### Example - RIGHT:
+```lua
+-- DO: Use verified native with correct params
+SetEntityInvincible(PlayerPedId(), true)  -- Verified at docs.fivem.net
+```
+
+---
+
 ## Content Map
 
 **Read ONLY relevant files based on the request:**
