@@ -27,8 +27,6 @@ shared_script '@es_extended/imports.lua'
 
 ```lua
 -- QBox patterns
-exports.qbx_core:GetCoreObject()
-exports['qbx_core']:GetCoreObject()
 lib.callback  -- ox_lib integration
 
 -- QBCore patterns
@@ -59,7 +57,7 @@ local function DetectFramework()
     local esx = GetResourceState('es_extended')
 
     if qbx == 'started' or qbx == 'starting' then
-        return 'qbox', exports.qbx_core:GetCoreObject()
+        return 'qbox'
     elseif qb == 'started' or qb == 'starting' then
         return 'qbcore', exports['qb-core']:GetCoreObject()
     elseif esx == 'started' or esx == 'starting' then
