@@ -6,13 +6,6 @@
 
 ## Core Access
 
-```lua
--- Recommended
-local QBX = exports.qbx_core:GetCoreObject()
-
--- Alternative with import
--- Add to fxmanifest: shared_script '@qbx_core/import.lua'
-```
 
 ---
 
@@ -21,7 +14,7 @@ local QBX = exports.qbx_core:GetCoreObject()
 | Feature | QBCore | QBox |
 |---------|--------|------|
 | Resource name | `qb-core` | `qbx_core` |
-| Core access | `exports['qb-core']:GetCoreObject()` | `exports.qbx_core:GetCoreObject()` |
+| Core access | `exports['qb-core']:GetCoreObject()` |
 | Inventory | qb-inventory | ox_inventory (required) |
 | Utilities | Built-in | ox_lib (required) |
 | Callbacks | QBCore.Functions.CreateCallback | lib.callback |
@@ -33,7 +26,6 @@ local QBX = exports.qbx_core:GetCoreObject()
 ## Player Data (Client)
 
 ```lua
-local QBX = exports.qbx_core:GetCoreObject()
 
 -- Get player data
 local PlayerData = QBX.Functions.GetPlayerData()
@@ -52,7 +44,6 @@ PlayerData.metadata       -- Additional data
 ## Player Functions (Server)
 
 ```lua
-local QBX = exports.qbx_core:GetCoreObject()
 
 -- Get player object
 local Player = QBX.Functions.GetPlayer(source)
